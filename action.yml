@@ -1,0 +1,16 @@
+##
+name: 'TYPO3 CI Xliff Lint'
+description: 'GitHub Action that lints your xliff code.'
+branding:
+  icon: check
+  color: orange
+inputs:
+  files:
+    description: 'Files you want to lint.'
+    required: false
+    default: 'Resources'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.files }}
