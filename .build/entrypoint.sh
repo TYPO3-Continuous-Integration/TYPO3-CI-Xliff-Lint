@@ -25,7 +25,7 @@ Lint() {
   echo "---------------------------------------------"
   echo "-- Running lint... ---"
   echo "---------------------------------------------"
-  sh -c "xmllint --schema ./xliff-core-1.2-strict.xsd --noout $(find $input_paths -name '*.xlf')"
+  sh -c "xmllint --schema /xliff-core-1.2-strict.xsd --noout $(find $input_paths -name '*.xlf')"
 }
 
 #### Function Footer ###########################################################
