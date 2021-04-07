@@ -2,8 +2,6 @@
 
 set -e
 
-input_paths="$1"
-
 ### Function Header ###########################################################
 Header() {
   ##########
@@ -25,7 +23,7 @@ Lint() {
   echo "---------------------------------------------"
   echo "-- Running lint... ---"
   echo "---------------------------------------------"
-  sh -c "xmllint --schema /xliff-core-1.2-strict.xsd --noout $(find $input_paths -name '*.xlf')"
+  xmllint --schema /xliff-core-1.2-strict.xsd --noout $(find . -name '*.xlf')
 }
 
 #### Function Footer ###########################################################
